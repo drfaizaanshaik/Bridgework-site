@@ -403,24 +403,28 @@ nav.primary-nav a.nav-link:hover { color: var(--green); }
 /* ---------- About ---------- */
 
 .about-section { background: var(--paper); }
-
 .about-grid {
   display: grid;
-  grid-template-columns: 0.8fr 1.2fr;
-  gap: 56px;
+  grid-template-columns: 260px 1fr;
+  gap: 48px;
   align-items: start;
 }
 
 @media (max-width: 860px) {
-  .about-grid { grid-template-columns: 1fr; gap: 32px; }
+  .about-grid { grid-template-columns: 1fr; gap: 24px; }
 }
 
 .about-photo img {
   width: 100%;
+  max-width: 260px;
   border-radius: var(--radius);
   box-shadow: var(--shadow);
   aspect-ratio: 4 / 5;
   object-fit: cover;
+}
+
+@media (max-width: 860px) {
+  .about-photo img { max-width: 220px; }
 }
 
 .about-stats {
